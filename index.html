@@ -3,570 +3,1561 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>நம்ம ஊரு பாய் | Namma Ooru Paai</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:ital,wght@0,400;0,600;1,400&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+<title>ARC-DEC Interiors</title>
+<link rel="icon" type="image/jpeg" href="logo.jpeg">
+<meta name="description" content="ARC-DEC Interiors – Complete interior solutions for homes & offices in Rajapalayam and Sivakasi, Tamil Nadu. Modular kitchens, wardrobes, false ceilings, and more.">
+<meta name="keywords" content="interior designers Rajapalayam, interiors Sivakasi, modular kitchen Rajapalayam, home interior Tamil Nadu, ARC-DEC Interiors">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root {
-  --sand:#f5e9d0;--cream:#fdf6e8;--green:#3a6b35;--dgreen:#1e3d1a;
-  --gold:#c8952a;--brown:#7a4f2d;--dark:#1a1208;--accent:#e07b1a;
-  --wa:#25D366;--red:#e74c3c;
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--cream);color:var(--dark);font-family:'Lora',serif;overflow-x:hidden;}
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --gold-dark: #A07830;
+    --charcoal: #1A1A1A;
+    --charcoal-mid: #2E2E2E;
+    --charcoal-soft: #3D3D3D;
+    --white: #FFFFFF;
+    --off-white: #F8F5EF;
+    --text-light: #B0A090;
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'Outfit', sans-serif;
+    --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --nav-h: 80px;
+  }
 
-/* HERO */
-.hero{min-height:100vh;background:var(--dgreen);position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;overflow:hidden;padding:2rem;}
-.hero::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 8px,rgba(255,255,255,.03) 8px,rgba(255,255,255,.03) 9px),repeating-linear-gradient(90deg,transparent,transparent 8px,rgba(255,255,255,.03) 8px,rgba(255,255,255,.03) 9px);pointer-events:none;}
-.hero-badge{display:inline-block;background:var(--gold);color:var(--dark);font-family:'Noto Sans Tamil',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.4rem 1.2rem;border-radius:2rem;margin-bottom:1.5rem;animation:fadeDown .7s ease both;}
-.hero-tamil{font-family:'Noto Sans Tamil',sans-serif;font-size:clamp(2.2rem,6vw,4.5rem);font-weight:700;color:var(--sand);line-height:1.1;animation:fadeDown .8s .1s ease both;}
-.hero-english{font-family:'Playfair Display',serif;font-size:clamp(1rem,2.5vw,1.5rem);color:var(--gold);letter-spacing:.08em;margin-top:.5rem;animation:fadeDown .8s .2s ease both;}
-.hero-tagline{margin-top:1.5rem;font-size:clamp(.9rem,2vw,1.1rem);color:rgba(245,233,208,.75);font-style:italic;animation:fadeDown .8s .3s ease both;}
-.hero-leaf-strip{position:absolute;bottom:0;left:0;right:0;height:60px;background:var(--cream);clip-path:ellipse(55% 100% at 50% 100%);}
-.scroll-cta{margin-top:2.5rem;animation:fadeDown .8s .5s ease both,bounce 2s 1.5s infinite;color:var(--gold);font-size:.85rem;letter-spacing:.1em;display:flex;flex-direction:column;align-items:center;gap:.4rem;}
-.scroll-cta span{font-size:1.5rem;}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* STRIP */
-.features-strip{display:flex;justify-content:center;flex-wrap:wrap;background:var(--gold);padding:.9rem 1rem;}
-.feat-item{font-family:'Noto Sans Tamil',sans-serif;font-size:.8rem;font-weight:600;color:var(--dark);padding:0 1.5rem;border-right:1px solid rgba(0,0,0,.2);}
-.feat-item:last-child{border-right:none;}
+  html { scroll-behavior: smooth; font-size: 16px; }
 
-/* SECTION */
-.section{padding:4rem 1.5rem;max-width:1100px;margin:0 auto;}
-.section-label{font-family:'Noto Sans Tamil',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:.5rem;}
-.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);color:var(--dgreen);line-height:1.2;margin-bottom:.5rem;}
-.section-title span{font-family:'Noto Sans Tamil',sans-serif;color:var(--brown);font-size:.75em;}
-.divider{width:50px;height:3px;background:var(--gold);margin:1rem 0 2rem;border-radius:2px;}
+  body {
+    font-family: var(--font-body);
+    background: var(--white);
+    color: var(--charcoal);
+    overflow-x: hidden;
+  }
 
-/* PRODUCTS */
-.category-title{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--dgreen);margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid var(--sand);display:flex;align-items:center;gap:.6rem;}
-.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.2rem;}
-.product-card{background:white;border:1px solid rgba(0,0,0,.08);border-radius:12px;overflow:hidden;transition:transform .25s,box-shadow .25s;cursor:pointer;position:relative;}
-.product-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.12);}
-.product-card.popular::before{content:'⭐ Most Popular';position:absolute;top:10px;right:10px;background:var(--accent);color:white;font-size:.65rem;font-weight:700;padding:.25rem .6rem;border-radius:20px;z-index:2;}
-.card-visual{height:130px;display:flex;align-items:center;justify-content:center;font-size:3rem;overflow:hidden;}
-.cat-prayer .card-visual{background:linear-gradient(135deg,#d4edda,#a8d5b5);}
-.cat-standard .card-visual{background:linear-gradient(135deg,#fde8c0,#f5c96b);}
-.cat-strong .card-visual{background:linear-gradient(135deg,#c8e6c9,#81c784);}
-.cat-family .card-visual{background:linear-gradient(135deg,#ffe0b2,#ffb74d);}
-.cat-other .card-visual{background:linear-gradient(135deg,#e8daff,#c0a3f5);}
-.card-body{padding:1rem 1.1rem 1.2rem;}
-.card-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--dgreen);margin-bottom:.2rem;}
-.card-size{font-size:.8rem;color:#888;font-style:italic;margin-bottom:.6rem;}
-.card-use{font-size:.75rem;color:var(--brown);background:var(--sand);display:inline-block;padding:.15rem .5rem;border-radius:20px;margin-bottom:.8rem;}
-.card-price{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--green);margin-bottom:.8rem;}
-.card-price small{font-size:.7rem;font-weight:400;color:#999;font-family:'Lora',serif;}
-.btn-cart{width:100%;background:var(--green);color:white;border:none;padding:.65rem 1rem;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;transition:background .2s;font-family:'Lora',serif;}
-.btn-cart:hover{background:var(--dgreen);}
+  /* ─── SCROLLBAR ─── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--charcoal); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
 
-/* CART BAR */
-.cart-bar{position:fixed;bottom:0;left:0;right:0;background:var(--dgreen);color:white;padding:.8rem 1.5rem;display:flex;align-items:center;justify-content:space-between;z-index:100;transform:translateY(100%);transition:transform .35s;box-shadow:0 -4px 20px rgba(0,0,0,.2);}
-.cart-bar.visible{transform:translateY(0);}
-.cart-info{font-size:.9rem;}
-.cart-count{display:inline-flex;align-items:center;justify-content:center;background:var(--gold);color:var(--dark);width:22px;height:22px;border-radius:50%;font-size:.75rem;font-weight:700;margin-right:.5rem;}
-.cart-total{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--gold);}
-.btn-whatsapp{background:var(--wa);color:white;border:none;padding:.65rem 1.4rem;border-radius:8px;font-size:.9rem;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:.5rem;font-family:'Lora',serif;}
+  /* ─── UTILITY ─── */
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .gold { color: var(--gold); }
+  .section-label {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 300;
+    color: var(--charcoal);
+    line-height: 1.15;
+  }
+  .section-title.light { color: var(--white); }
 
-/* MODALS */
-.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;display:none;align-items:flex-end;justify-content:center;}
-.modal-overlay.open{display:flex;}
-.modal{background:white;width:100%;max-width:520px;border-radius:20px 20px 0 0;padding:1.5rem;max-height:85vh;overflow-y:auto;animation:slideUp .3s ease;}
-.modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem;}
-.modal-title{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--dgreen);}
-.modal-close{background:var(--sand);border:none;width:32px;height:32px;border-radius:50%;font-size:1rem;cursor:pointer;}
-.cart-item{display:flex;align-items:center;gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--sand);}
-.ci-icon{font-size:2rem;}
-.ci-info{flex:1;}
-.ci-name{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--dgreen);}
-.ci-size{font-size:.78rem;color:#888;}
-.ci-controls{display:flex;align-items:center;gap:.5rem;}
-.qty-btn{background:var(--sand);border:none;width:28px;height:28px;border-radius:6px;font-size:1rem;cursor:pointer;}
-.qty-btn:hover{background:var(--gold);color:white;}
-.qty-num{font-weight:700;min-width:24px;text-align:center;}
-.ci-price{font-family:'Playfair Display',serif;font-weight:700;color:var(--green);font-size:1rem;min-width:60px;text-align:right;}
-.remove-btn{background:none;border:none;color:#ccc;cursor:pointer;font-size:1rem;padding:0 .3rem;}
-.remove-btn:hover{color:var(--red);}
-.modal-footer{margin-top:1.2rem;background:var(--sand);border-radius:12px;padding:1rem 1.2rem;}
-.total-row{display:flex;justify-content:space-between;font-size:.85rem;color:#666;margin-bottom:.4rem;}
-.total-row.grand{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--dgreen);margin-top:.6rem;padding-top:.6rem;border-top:1px solid rgba(0,0,0,.1);}
-.note-text{font-size:.75rem;color:#999;font-style:italic;margin:.5rem 0 1rem;}
-.btn-order{width:100%;background:var(--wa);color:white;border:none;padding:.9rem;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;font-family:'Lora',serif;}
-.empty-cart{text-align:center;padding:2rem 0;color:#aaa;font-style:italic;}
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 2px;
+  }
+  .btn-gold {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--charcoal);
+  }
+  .btn-gold:hover {
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(201,168,76,0.35);
+  }
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.5);
+  }
+  .btn-outline:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+  .btn-dark {
+    background: var(--charcoal);
+    color: var(--white);
+  }
+  .btn-dark:hover {
+    background: var(--charcoal-soft);
+    transform: translateY(-2px);
+  }
 
-/* ABOUT + FOOTER */
-.about-block{background:var(--dgreen);color:var(--sand);padding:4rem 1.5rem;text-align:center;}
-.about-block .section-title{color:var(--sand);}
-.about-block .section-label{color:var(--gold);}
-.about-block .divider{background:var(--gold);margin:1rem auto 2rem;}
-.about-text{max-width:640px;margin:0 auto;font-size:1rem;line-height:1.8;color:rgba(245,233,208,.85);}
-.tamil-line{font-family:'Noto Sans Tamil',sans-serif;font-size:1.1rem;color:var(--gold);margin-top:1.2rem;}
-.custom-banner{background:linear-gradient(135deg,var(--gold),var(--accent));padding:2rem 1.5rem;text-align:center;color:white;}
-.custom-banner h3{font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:.5rem;}
-.custom-banner p{font-size:.9rem;opacity:.9;margin-bottom:1rem;}
-.btn-custom{background:white;color:var(--accent);border:none;padding:.7rem 2rem;border-radius:8px;font-size:.95rem;font-weight:700;cursor:pointer;font-family:'Lora',serif;}
-footer{background:var(--dark);color:rgba(245,233,208,.7);text-align:center;padding:2rem 1.5rem;font-size:.82rem;line-height:1.8;}
-footer strong{color:var(--gold);}
+  /* ─── WHATSAPP FLOAT ─── */
+  .wa-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9999;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 30px rgba(37,211,102,0.45);
+    transition: var(--transition);
+    text-decoration: none;
+  }
+  .wa-float:hover { transform: scale(1.12); box-shadow: 0 12px 40px rgba(37,211,102,0.6); }
+  .wa-float svg { width: 32px; height: 32px; fill: white; }
+  .wa-pulse {
+    position: absolute;
+    top: -4px; right: -4px;
+    width: 16px; height: 16px;
+    background: var(--gold);
+    border-radius: 50%;
+    border: 2px solid white;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%,100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 0.7; }
+  }
 
-/* ═══════════ ADMIN ═══════════ */
-#adminBtn{position:fixed;top:14px;right:14px;z-index:300;background:rgba(0,0,0,.35);color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:.35rem .75rem;font-size:.72rem;cursor:pointer;backdrop-filter:blur(4px);font-family:'Lora',serif;}
-#adminBtn:hover{background:rgba(0,0,0,.6);color:white;}
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--nav-h);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+    padding: 0 40px;
+  }
+  nav.scrolled {
+    background: rgba(26,26,26,0.97);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 1px 0 rgba(201,168,76,0.2);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo img { height: 52px; width: auto; filter: drop-shadow(0 0 8px rgba(201,168,76,0.3)); }
+  .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+  .nav-links a {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0;
+    width: 0; height: 1px;
+    background: var(--gold);
+    transition: width 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta { display: flex; align-items: center; gap: 16px; }
 
-/* Login */
-#loginOverlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:500;display:none;align-items:center;justify-content:center;}
-#loginOverlay.open{display:flex;}
-.login-box{background:white;border-radius:16px;padding:2rem;width:300px;text-align:center;animation:slideUp .3s ease;}
-.login-box h3{font-family:'Playfair Display',serif;color:var(--dgreen);margin-bottom:1rem;}
-.login-box input{width:100%;padding:.7rem 1rem;border:1.5px solid #ddd;border-radius:8px;font-size:1rem;font-family:'Lora',serif;margin-bottom:.8rem;outline:none;}
-.login-box input:focus{border-color:var(--green);}
-.login-box .btn-login{width:100%;background:var(--dgreen);color:white;border:none;padding:.8rem;border-radius:8px;font-size:.95rem;font-weight:700;cursor:pointer;font-family:'Lora',serif;}
-.login-err{color:var(--red);font-size:.8rem;margin-bottom:.5rem;display:none;}
-.login-cancel{margin-top:.7rem;background:none;border:none;color:#999;font-size:.8rem;cursor:pointer;}
+  /* Mobile Nav */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: var(--white);
+    transition: var(--transition);
+  }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--charcoal);
+    z-index: 999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 3px;
+    transition: color 0.3s;
+  }
+  .mobile-menu a:hover { color: var(--gold); }
+  .mobile-close {
+    position: absolute;
+    top: 28px; right: 28px;
+    background: none; border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 28px;
+    line-height: 1;
+  }
 
-/* Admin full screen */
-#adminPanel{position:fixed;inset:0;background:#f0f4f0;z-index:400;display:none;flex-direction:column;overflow:hidden;}
-#adminPanel.open{display:flex;}
-.admin-topbar{background:var(--dgreen);color:white;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;flex-wrap:wrap;gap:.5rem;}
-.admin-topbar h2{font-family:'Playfair Display',serif;font-size:1.1rem;}
-.admin-topbar-actions{display:flex;gap:.6rem;}
-.admin-body{flex:1;overflow-y:auto;padding:1.5rem;}
-.admin-product-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin-bottom:1.5rem;}
-.admin-card{background:white;border-radius:12px;padding:1rem 1.2rem;border:1.5px solid #e0e8e0;display:flex;align-items:center;gap:1rem;}
-.admin-card.popular-badge{border-color:var(--accent);}
-.admin-card-icon{font-size:2rem;}
-.admin-card-info{flex:1;}
-.admin-card-name{font-family:'Playfair Display',serif;font-weight:700;color:var(--dgreen);font-size:.95rem;}
-.admin-card-meta{font-size:.75rem;color:#888;margin:.2rem 0;}
-.admin-card-price{font-weight:700;color:var(--green);}
-.admin-card-actions{display:flex;gap:.4rem;flex-shrink:0;}
-.btn-edit{background:var(--gold);color:white;border:none;padding:.35rem .7rem;border-radius:6px;font-size:.75rem;cursor:pointer;}
-.btn-delete{background:var(--red);color:white;border:none;padding:.35rem .7rem;border-radius:6px;font-size:.75rem;cursor:pointer;}
-.admin-form-wrap{background:white;border-radius:12px;padding:1.5rem;border:1.5px solid #d0e0d0;margin-bottom:1.5rem;}
-.admin-form-wrap h3{font-family:'Playfair Display',serif;color:var(--dgreen);margin-bottom:1rem;font-size:1.1rem;}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;}
-@media(max-width:480px){.form-grid{grid-template-columns:1fr;}}
-.form-group{display:flex;flex-direction:column;gap:.3rem;}
-.form-group.full{grid-column:1/-1;}
-.form-group label{font-size:.78rem;font-weight:600;color:#555;text-transform:uppercase;letter-spacing:.05em;}
-.form-group input,.form-group select{padding:.6rem .8rem;border:1.5px solid #ddd;border-radius:8px;font-size:.9rem;font-family:'Lora',serif;outline:none;}
-.form-group input:focus,.form-group select:focus{border-color:var(--green);}
-.checkbox-row{display:flex;align-items:center;gap:.5rem;font-size:.85rem;margin-top:.3rem;}
-.checkbox-row input{width:16px;height:16px;cursor:pointer;}
-.form-actions{display:flex;gap:.6rem;margin-top:1rem;}
-.btn-save{background:var(--green);color:white;border:none;padding:.7rem 1.5rem;border-radius:8px;font-size:.9rem;font-weight:700;cursor:pointer;font-family:'Lora',serif;}
-.btn-cancel-form{background:#eee;color:#555;border:none;padding:.7rem 1rem;border-radius:8px;font-size:.9rem;cursor:pointer;font-family:'Lora',serif;}
-.btn-add-new{background:var(--gold);color:white;border:none;padding:.65rem 1.2rem;border-radius:8px;font-size:.85rem;font-weight:700;cursor:pointer;font-family:'Lora',serif;}
-.btn-logout{background:rgba(255,255,255,.15);color:white;border:1px solid rgba(255,255,255,.3);padding:.4rem .9rem;border-radius:6px;font-size:.8rem;cursor:pointer;font-family:'Lora',serif;}
-.admin-empty{text-align:center;color:#aaa;padding:2rem;font-style:italic;}
-.admin-hint{background:#fffbe6;border:1px solid #ffe58f;border-radius:10px;padding:1rem 1.2rem;margin-bottom:1.2rem;font-size:.85rem;color:#7a5c00;line-height:1.7;}
-.admin-hint strong{display:block;margin-bottom:.3rem;font-size:.9rem;}
+  /* ─── HERO ─── */
+  #hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1600&q=90');
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.05);
+    animation: kenBurns 12s ease-in-out infinite alternate;
+  }
+  @keyframes kenBurns {
+    from { transform: scale(1.05) translateX(0); }
+    to { transform: scale(1.12) translateX(-1%); }
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(10,10,10,0.82) 0%,
+      rgba(20,16,10,0.65) 60%,
+      rgba(30,22,8,0.5) 100%
+    );
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 780px;
+    padding: 0 40px;
+    margin-left: 8vw;
+    animation: heroFadeUp 1.2s ease 0.3s both;
+  }
+  @keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-badge {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(201,168,76,0.4);
+    padding: 7px 20px;
+    margin-bottom: 28px;
+    font-family: var(--font-body);
+  }
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6.5vw, 5.5rem);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.05;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+  }
+  .hero-title em { font-style: italic; color: var(--gold-light); }
+  .hero-sub {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 10px;
+    line-height: 1.7;
+  }
+  .hero-location {
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    margin-bottom: 44px;
+    font-weight: 500;
+  }
+  .hero-btns { display: flex; flex-wrap: wrap; gap: 16px; }
+  .hero-scroll {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .hero-scroll span {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    font-family: var(--font-body);
+  }
+  .scroll-line {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollLine 2s ease-in-out infinite;
+  }
+  @keyframes scrollLine {
+    0%,100% { opacity: 1; transform: scaleY(1); transform-origin: top; }
+    50% { opacity: 0.4; transform: scaleY(0.5); }
+  }
 
-/* TOAST */
-.success-toast{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:var(--green);color:white;padding:.6rem 1.4rem;border-radius:20px;font-size:.85rem;z-index:1000;display:none;white-space:nowrap;}
+  /* ─── WHY CHOOSE ─── */
+  #why {
+    padding: 100px 0;
+    background: var(--off-white);
+    position: relative;
+    overflow: hidden;
+  }
+  #why::before {
+    content: 'WHY US';
+    position: absolute;
+    top: 20px; right: -20px;
+    font-family: var(--font-display);
+    font-size: 160px;
+    font-weight: 600;
+    color: rgba(201,168,76,0.05);
+    white-space: nowrap;
+    pointer-events: none;
+    letter-spacing: -4px;
+  }
+  .why-header { text-align: center; margin-bottom: 64px; }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+  .why-card {
+    background: var(--white);
+    padding: 44px 28px 36px;
+    text-align: center;
+    position: relative;
+    transition: var(--transition);
+    border-bottom: 2px solid transparent;
+  }
+  .why-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    transform: scaleX(0);
+    transition: var(--transition);
+  }
+  .why-card:hover { transform: translateY(-8px); border-bottom-color: var(--gold); box-shadow: 0 24px 60px rgba(0,0,0,0.08); }
+  .why-card:hover::before { transform: scaleX(1); }
+  .why-icon {
+    width: 68px; height: 68px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(201,168,76,0.1), rgba(201,168,76,0.05));
+    border: 1px solid rgba(201,168,76,0.25);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 24px;
+    font-size: 28px;
+    transition: var(--transition);
+  }
+  .why-card:hover .why-icon { background: linear-gradient(135deg, var(--gold), var(--gold-light)); box-shadow: 0 8px 24px rgba(201,168,76,0.3); }
+  .why-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: var(--charcoal);
+  }
+  .why-card p { font-size: 14px; color: #666; line-height: 1.7; font-weight: 300; }
 
-/* ANIMATIONS */
-@keyframes fadeDown{from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);}}
-@keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(6px);}}
-@keyframes slideUp{from{transform:translateY(30px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+  /* ─── SERVICES ─── */
+  #services {
+    padding: 100px 0;
+    background: var(--charcoal);
+    position: relative;
+    overflow: hidden;
+  }
+  .services-header { text-align: center; margin-bottom: 64px; }
+  .services-header p { font-size: 15px; color: rgba(255,255,255,0.5); margin-top: 12px; font-weight: 300; }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .service-card {
+    background: var(--charcoal-mid);
+    padding: 44px 32px;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    transition: var(--transition);
+    border: 1px solid rgba(255,255,255,0.03);
+  }
+  .service-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(201,168,76,0.08), transparent);
+    opacity: 0;
+    transition: var(--transition);
+  }
+  .service-card:hover { background: var(--charcoal-soft); transform: translateY(-4px); }
+  .service-card:hover::after { opacity: 1; }
+  .service-card:hover .svc-num { color: var(--gold); }
+  .svc-num {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.06);
+    position: absolute;
+    top: 16px; right: 20px;
+    line-height: 1;
+    transition: var(--transition);
+  }
+  .svc-icon { font-size: 36px; margin-bottom: 20px; display: block; }
+  .service-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .service-card p { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.7; font-weight: 300; }
+  .svc-line {
+    width: 32px; height: 1px;
+    background: var(--gold);
+    margin-bottom: 16px;
+    transition: width var(--transition);
+  }
+  .service-card:hover .svc-line { width: 56px; }
+
+  /* ─── SMART STORAGE ─── */
+  #storage {
+    padding: 100px 0;
+    background: var(--off-white);
+  }
+  .storage-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .storage-img-wrap {
+    position: relative;
+  }
+  .storage-img-wrap img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+  }
+  .storage-img-badge {
+    position: absolute;
+    bottom: -24px; right: -24px;
+    background: var(--charcoal);
+    color: var(--white);
+    padding: 28px 32px;
+    width: 200px;
+    text-align: center;
+  }
+  .storage-img-badge strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .storage-img-badge span { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+  .storage-content { padding-right: 20px; }
+  .storage-content .section-title { margin-bottom: 20px; }
+  .storage-content p { font-size: 15px; color: #555; line-height: 1.8; margin-bottom: 36px; font-weight: 300; }
+  .storage-features { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .sf-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    background: var(--white);
+    border-left: 2px solid var(--gold);
+    transition: var(--transition);
+  }
+  .sf-item:hover { transform: translateX(4px); box-shadow: 4px 0 20px rgba(201,168,76,0.1); }
+  .sf-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+  .sf-item h4 { font-size: 14px; font-weight: 500; margin-bottom: 4px; }
+  .sf-item p { font-size: 12px; color: #888; font-weight: 300; }
+
+  /* ─── PORTFOLIO ─── */
+  #projects {
+    padding: 100px 0;
+    background: var(--charcoal);
+  }
+  .projects-header { text-align: center; margin-bottom: 20px; }
+  .projects-note {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  .projects-note::before, .projects-note::after {
+    content: '';
+    width: 48px; height: 1px;
+    background: rgba(255,255,255,0.15);
+  }
+  .projects-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  .tab-btn {
+    padding: 9px 24px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 2px;
+    font-family: var(--font-body);
+  }
+  .tab-btn.active, .tab-btn:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--charcoal);
+  }
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+  }
+  .portfolio-item {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+  }
+  .portfolio-item:first-child { grid-column: span 2; aspect-ratio: auto; }
+  .portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+    display: block;
+  }
+  .portfolio-item:hover img { transform: scale(1.08); }
+  .portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%);
+    opacity: 0;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+  }
+  .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+  .portfolio-overlay h4 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--white);
+    font-weight: 400;
+  }
+  .portfolio-overlay span { font-size: 11px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; }
+
+  /* ─── PROCESS ─── */
+  #process {
+    padding: 100px 0;
+    background: var(--white);
+    position: relative;
+  }
+  .process-header { text-align: center; margin-bottom: 72px; }
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+  }
+  .process-steps::before {
+    content: '';
+    position: absolute;
+    top: 48px; left: 12.5%; right: 12.5%;
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold), rgba(201,168,76,0.3), var(--gold));
+  }
+  .process-step { text-align: center; padding: 0 20px; }
+  .step-circle {
+    width: 96px; height: 96px;
+    border-radius: 50%;
+    background: var(--off-white);
+    border: 1px solid rgba(201,168,76,0.3);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 28px;
+    font-size: 32px;
+    position: relative;
+    z-index: 1;
+    transition: var(--transition);
+  }
+  .process-step:hover .step-circle {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    border-color: var(--gold);
+    box-shadow: 0 12px 40px rgba(201,168,76,0.35);
+    transform: scale(1.08);
+  }
+  .step-num {
+    position: absolute;
+    top: -6px; right: -6px;
+    width: 28px; height: 28px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--charcoal);
+  }
+  .process-step h3 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--charcoal);
+  }
+  .process-step p { font-size: 13px; color: #777; line-height: 1.7; font-weight: 300; }
+
+  /* ─── TESTIMONIALS (MARQUEE) ─── */
+  #testimonials {
+    padding: 80px 0;
+    background: var(--off-white);
+    overflow: hidden;
+  }
+  .testi-header { text-align: center; margin-bottom: 56px; }
+  .marquee-track {
+    display: flex;
+    gap: 24px;
+    animation: marqueeScroll 30s linear infinite;
+    width: max-content;
+  }
+  .marquee-track:hover { animation-play-state: paused; }
+  @keyframes marqueeScroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .testi-card {
+    background: var(--white);
+    padding: 36px 32px;
+    min-width: 320px;
+    max-width: 320px;
+    border-top: 2px solid var(--gold);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.05);
+    flex-shrink: 0;
+  }
+  .testi-stars { color: var(--gold); font-size: 18px; letter-spacing: 3px; margin-bottom: 16px; }
+  .testi-text {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  .testi-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .testi-avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    font-family: var(--font-display);
+  }
+  .testi-name { font-size: 13px; font-weight: 500; }
+  .testi-loc { font-size: 11px; color: #999; letter-spacing: 1px; }
+
+  /* ─── CTA STRIP ─── */
+  #cta {
+    padding: 100px 0;
+    background: var(--charcoal);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  #cta::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  #cta .section-title { font-size: clamp(2.4rem, 5vw, 4rem); margin-bottom: 16px; }
+  #cta p { color: rgba(255,255,255,0.5); margin-bottom: 44px; font-size: 15px; font-weight: 300; }
+  .cta-btns { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+  .btn-wa {
+    background: #25D366;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: var(--transition);
+  }
+  .btn-wa:hover { background: #1ebe5a; transform: translateY(-2px); box-shadow: 0 12px 40px rgba(37,211,102,0.35); }
+  .btn-wa svg { width: 20px; height: 20px; fill: white; }
+
+  /* ─── CONTACT ─── */
+  #contact {
+    padding: 100px 0;
+    background: var(--off-white);
+  }
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 72px;
+    align-items: start;
+  }
+  .contact-info { }
+  .contact-info .section-title { margin-bottom: 24px; }
+  .contact-info p { font-size: 15px; color: #555; line-height: 1.8; margin-bottom: 36px; font-weight: 300; }
+  .info-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  .info-block:last-child { border: none; }
+  .info-ico { font-size: 24px; margin-top: 2px; flex-shrink: 0; }
+  .info-block h4 { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; font-weight: 500; }
+  .info-block p { font-size: 14px; color: var(--charcoal); font-weight: 400; line-height: 1.6; margin: 0; }
+  .contact-form { }
+  .form-group { margin-bottom: 20px; }
+  .form-group label { display: block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; color: var(--charcoal); margin-bottom: 10px; }
+  .form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 16px 18px;
+    background: var(--white);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--charcoal);
+    outline: none;
+    transition: border-color 0.3s;
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+  .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    border-color: transparent transparent var(--gold);
+    background: #fff;
+  }
+  .form-group textarea { resize: vertical; min-height: 130px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-submit {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: #111;
+    padding: 72px 0 32px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 56px;
+  }
+  .footer-brand img { height: 56px; width: auto; margin-bottom: 20px; display: block; }
+  .footer-brand p { font-size: 13px; color: rgba(255,255,255,0.35); line-height: 1.8; font-weight: 300; max-width: 260px; }
+  .footer-brand .social-links { display: flex; gap: 12px; margin-top: 20px; }
+  .social-links a {
+    width: 38px; height: 38px;
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    font-size: 16px;
+    transition: var(--transition);
+    border-radius: 2px;
+  }
+  .social-links a:hover { border-color: var(--gold); color: var(--gold); }
+  footer h4 {
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  footer ul { list-style: none; }
+  footer ul li { margin-bottom: 10px; }
+  footer ul a {
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 300;
+  }
+  footer ul a:hover { color: var(--gold); }
+  .footer-seo { margin-top: 10px; }
+  .footer-seo span {
+    display: inline-block;
+    font-size: 11px;
+    color: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.04);
+    padding: 4px 10px;
+    margin: 4px 4px 0 0;
+    border-radius: 1px;
+  }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.2); font-weight: 300; }
+  .footer-gold-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin-bottom: 48px;
+  }
+
+  /* ─── ANIMATIONS ─── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+  .fade-up:nth-child(2) { transition-delay: 0.1s; }
+  .fade-up:nth-child(3) { transition-delay: 0.2s; }
+  .fade-up:nth-child(4) { transition-delay: 0.3s; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 1024px) {
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .process-steps { grid-template-columns: repeat(2, 1fr); gap: 48px; }
+    .process-steps::before { display: none; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .storage-inner { grid-template-columns: 1fr; gap: 48px; }
+    .storage-img-badge { right: 12px; bottom: 12px; }
+    .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+    .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+    .portfolio-item:first-child { grid-column: span 2; }
+  }
+  @media (max-width: 768px) {
+    :root { --nav-h: 68px; }
+    nav { padding: 0 20px; }
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    .hero-content { margin-left: 0; padding: 0 24px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr 1fr; }
+    .process-steps { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .portfolio-item:first-child { grid-column: span 1; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .footer-brand p { max-width: 100%; }
+    .storage-features { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    .why-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr; }
+    .hero-title { font-size: 2.4rem; }
+  }
 </style>
 </head>
 <body>
 
-<button id="adminBtn" onclick="openLogin()">🔐 Admin</button>
+<!-- ── FLOATING WHATSAPP ── -->
+<a href="https://wa.me/9345796509?text=Hello%20ARC-DEC%20Interiors!%20I%27m%20interested%20in%20your%20interior%20design%20services." target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+  <span class="wa-pulse"></span>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-badge">🌿 100% Natural • Handmade • Plastic-Free</div>
-  <div class="hero-tamil">நம்ம ஊரு பாய்</div>
-  <div class="hero-english">Namma Ooru Paai — Date Palm Leaf Mats</div>
-  <p class="hero-tagline">Crafted by hand. Grown by nature. Made for your home.</p>
-  <div class="scroll-cta">Shop Now<span>↓</span></div>
-  <div class="hero-leaf-strip"></div>
+<!-- ── MOBILE MENU ── -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobile()">✕</button>
+  <a href="#hero" onclick="closeMobile()">Home</a>
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <a href="#projects" onclick="closeMobile()">Projects</a>
+  <a href="#process" onclick="closeMobile()">About</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+  <a href="https://wa.me/9345796509?text=I%27d%20like%20a%20free%20estimate!" target="_blank" class="btn btn-gold" style="border-radius:2px;margin-top:12px;">Get Free Estimate</a>
+</div>
+
+<!-- ── NAV ── -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <img src="/mnt/user-data/uploads/IMG-20260416-WA0003_jpg.jpeg" alt="ARC-DEC Interiors Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span style="display:none;font-family:var(--font-display);font-size:1.5rem;font-weight:500;color:var(--gold);letter-spacing:2px;">ARC-DEC</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="https://wa.me/9345796509?text=I%27d%20like%20a%20free%20estimate!" target="_blank" class="btn btn-gold" style="padding:11px 24px;font-size:11px;">Get Free Estimate</a>
+    </div>
+    <div class="hamburger" onclick="openMobile()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Premium Interior Design Studio</div>
+    <h1 class="hero-title">Crafting Spaces<br>That <em>Inspire</em></h1>
+    <p class="hero-sub">Complete Interior Solutions for Your Home & Office</p>
+    <p class="hero-location">📍 Rajapalayam &amp; Sivakasi, Tamil Nadu</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/9345796509?text=I%27d%20like%20to%20book%20a%20free%20consultation!" target="_blank" class="btn btn-gold">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Book Free Consultation
+      </a>
+      <a href="#projects" class="btn btn-outline">View Projects</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
 </section>
 
-<div class="features-strip">
-  <div class="feat-item">🌴 ஈச்சம் ஓலை</div>
-  <div class="feat-item">✋ Handwoven</div>
-  <div class="feat-item">♻️ Eco-Friendly</div>
-  <div class="feat-item">📦 Pan India Delivery</div>
-  <div class="feat-item">📐 Custom Sizes</div>
-</div>
-
-<div class="section" id="shop">
-  <div class="section-label">Shop Our Collection</div>
-  <div class="section-title">Find Your Perfect Mat <span>| உங்கள் பாய் தேர்வு</span></div>
-  <div class="divider"></div>
-  <div id="shopContent"></div>
-</div>
-
-<div class="custom-banner">
-  <h3>📐 Custom Size Available!</h3>
-  <p>Need a specific size? We weave custom mats for you.<br>Contact us on WhatsApp for bulk &amp; custom orders.</p>
-  <button class="btn-custom" onclick="openWhatsApp('Hi! I need a custom size mat. Please help.')">Chat on WhatsApp</button>
-</div>
-
-<div class="about-block">
-  <div class="section-label">Our Story</div>
-  <div class="section-title">Rooted in Tradition</div>
-  <div class="divider"></div>
-  <div class="about-text">
-    Every mat we make is a tribute to Tamil Nadu's centuries-old craft of weaving Date Palm leaves — <em>ஈச்சம் ஓலை</em>. No machines. No plastics. Just skilled hands, natural leaves, and generations of wisdom.
-    <br><br>
-    Founded under the vision of <strong style="color:var(--gold)">@actor_nandha_official_</strong>, Namma Ooru Paai brings this beautiful tradition back into modern homes.
-    <div class="tamil-line">இயற்கை • கைவினை • இல்லம் 🌴</div>
+<!-- ── WHY CHOOSE US ── -->
+<section id="why">
+  <div class="container">
+    <div class="why-header fade-up">
+      <div class="section-label">Why ARC-DEC</div>
+      <h2 class="section-title">Designed With Purpose,<br>Built With Precision</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-up">
+        <div class="why-icon">🏆</div>
+        <h3>Premium Quality</h3>
+        <p>We use only the finest materials and fittings to ensure your interiors stand the test of time while looking impeccable.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">🎨</div>
+        <h3>Customized Designs</h3>
+        <p>Every space is unique. Our designers craft bespoke solutions that reflect your personal style and functional needs.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">⏱️</div>
+        <h3>Timely Delivery</h3>
+        <p>We respect your time. Our streamlined execution process ensures projects are delivered on schedule, every time.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">🔑</div>
+        <h3>End-to-End Service</h3>
+        <p>From first concept to final handover, we manage everything so you experience a completely stress-free transformation.</p>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
+<!-- ── SERVICES ── -->
+<section id="services">
+  <div class="container">
+    <div class="services-header fade-up">
+      <div class="section-label">What We Create</div>
+      <h2 class="section-title light">Our Interior Services</h2>
+      <p>Comprehensive design and execution across every corner of your home and office</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <span class="svc-num">01</span>
+        <div class="svc-line"></div>
+        <span class="svc-icon">🍳</span>
+        <h3>Modular Kitchens</h3>
+        <p>Smart layouts, premium hardware, and stunning finishes for the heart of your home.</p>
+      </div>
+      <div class="service-card fade-up">
+        <span class="svc-num">02</span>
+        <div class="svc-line"></div>
+        <span class="svc-icon">🚪</span>
+        <h3>Wardrobes</h3>
+        <p>Walk-in closets and fitted wardrobes designed to maximize storage with style.</p>
+      </div>
+      <div class="service-card fade-up">
+        <span class="svc-num">03</span>
+        <div class="svc-line"></div>
+        <span class="svc-icon">📺</span>
+        <h3>TV Units</h3>
+        <p>Statement entertainment walls that seamlessly integrate aesthetics and function.</p>
+      </div>
+      <div class="service-card fade-up">
+        <span class="svc-num">04</span>
+        <div class="svc-line"></div>
+        <span class="svc-icon">🪔</span>
+        <h3>Pooja Units</h3>
+        <p>Sacred spaces crafted with devotion — traditional craftsmanship meets modern design.</p>
+      </div>
+      <div class="service-card fade-up">
+        <span class="svc-num">05</span>
+        <div class="svc-line"></div>
+        <span class="svc-icon">✨</span>
+        <h3>False Ceiling</h3>
+        <p>Architectural ceiling designs with integrated lighting to elevate every room.</p>
+      </div>
+      <div class="service-card fade-up">
+        <span class="svc-num">06</span>
+        <div class="svc-line"></div>
+        <span class="svc-icon">🪵</span>
+        <h3>Wall Paneling</h3>
+        <p>Textured feature walls and premium paneling that define spaces with character.</p>
+      </div>
+      <div class="service-card fade-up">
+        <span class="svc-num">07</span>
+        <div class="svc-line"></div>
+        <span class="svc-icon">🛋️</span>
+        <h3>Customized Furniture</h3>
+        <p>Bespoke furniture built to exact dimensions and specifications for perfect fit.</p>
+      </div>
+      <div class="service-card fade-up">
+        <span class="svc-num">08</span>
+        <div class="svc-line"></div>
+        <span class="svc-icon">🏢</span>
+        <h3>Office Interiors</h3>
+        <p>Productive, inspiring workspaces designed to reflect your brand and culture.</p>
+      </div>
+      <div class="service-card fade-up">
+        <span class="svc-num">09</span>
+        <div class="svc-line"></div>
+        <span class="svc-icon">🗝️</span>
+        <h3>Turnkey Solutions</h3>
+        <p>Complete home transformation from bare walls to move-in ready perfection.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SMART STORAGE ── -->
+<section id="storage">
+  <div class="container">
+    <div class="storage-inner">
+      <div class="storage-img-wrap fade-up">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=85" alt="Smart Kitchen Storage">
+        <div class="storage-img-badge">
+          <strong>100%</strong>
+          <span>Space Utilised</span>
+        </div>
+      </div>
+      <div class="storage-content fade-up">
+        <div class="section-label">Innovation in Space</div>
+        <h2 class="section-title">Smart Storage<br>Solutions</h2>
+        <p>Every centimeter matters. We engineer intelligent storage into your interiors so your home stays beautiful, organized, and clutter-free — no matter how much life you live in it.</p>
+        <div class="storage-features">
+          <div class="sf-item">
+            <span class="sf-icon">📏</span>
+            <div>
+              <h4>Skirting Drawers</h4>
+              <p>Utilize floor-level space others miss</p>
+            </div>
+          </div>
+          <div class="sf-item">
+            <span class="sf-icon">🔄</span>
+            <div>
+              <h4>Magic Pull-outs</h4>
+              <p>Deep cabinet access made effortless</p>
+            </div>
+          </div>
+          <div class="sf-item">
+            <span class="sf-icon">📦</span>
+            <div>
+              <h4>Space-Saving Wardrobes</h4>
+              <p>Double the storage in half the space</p>
+            </div>
+          </div>
+          <div class="sf-item">
+            <span class="sf-icon">🪄</span>
+            <div>
+              <h4>Hidden Storage</h4>
+              <p>Secret compartments that blend seamlessly</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PORTFOLIO ── -->
+<section id="projects">
+  <div class="container">
+    <div class="projects-header fade-up">
+      <div class="section-label">Our Portfolio</div>
+      <h2 class="section-title light">Sample Designs — Our Style &amp; Quality</h2>
+    </div>
+    <div class="projects-note">Actual project images will be updated soon</div>
+    <div class="projects-tabs">
+      <button class="tab-btn active" data-filter="all">All</button>
+      <button class="tab-btn" data-filter="kitchen">Kitchen</button>
+      <button class="tab-btn" data-filter="bedroom">Bedroom</button>
+      <button class="tab-btn" data-filter="living">Living Room</button>
+      <button class="tab-btn" data-filter="office">Office</button>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-item" data-cat="living">
+        <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=1000&q=85" alt="Living Room Design">
+        <div class="portfolio-overlay">
+          <span>Living Room</span>
+          <h4>Modern Elegance</h4>
+        </div>
+      </div>
+      <div class="portfolio-item" data-cat="kitchen">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=85" alt="Modular Kitchen">
+        <div class="portfolio-overlay">
+          <span>Modular Kitchen</span>
+          <h4>Culinary Haven</h4>
+        </div>
+      </div>
+      <div class="portfolio-item" data-cat="bedroom">
+        <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=85" alt="Bedroom Design">
+        <div class="portfolio-overlay">
+          <span>Bedroom</span>
+          <h4>Serene Retreat</h4>
+        </div>
+      </div>
+      <div class="portfolio-item" data-cat="office">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=85" alt="Office Interior">
+        <div class="portfolio-overlay">
+          <span>Office</span>
+          <h4>Productive Workspace</h4>
+        </div>
+      </div>
+      <div class="portfolio-item" data-cat="living">
+        <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=600&q=85" alt="Living Room">
+        <div class="portfolio-overlay">
+          <span>Living Room</span>
+          <h4>Contemporary Comfort</h4>
+        </div>
+      </div>
+      <div class="portfolio-item" data-cat="bedroom">
+        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&q=85" alt="Bedroom">
+        <div class="portfolio-overlay">
+          <span>Bedroom</span>
+          <h4>Luxury Wardrobe</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROCESS ── -->
+<section id="process">
+  <div class="container">
+    <div class="process-header fade-up">
+      <div class="section-label">How We Work</div>
+      <h2 class="section-title">Our 4-Step Process</h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step fade-up">
+        <div class="step-circle">
+          🤝
+          <span class="step-num">1</span>
+        </div>
+        <h3>Consultation</h3>
+        <p>We understand your vision, preferences, lifestyle, and budget through an in-depth discovery session.</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="step-circle">
+          📐
+          <span class="step-num">2</span>
+        </div>
+        <h3>Design Planning</h3>
+        <p>Our designers create detailed 3D renders and material boards for your review and approval.</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="step-circle">
+          🔨
+          <span class="step-num">3</span>
+        </div>
+        <h3>Execution</h3>
+        <p>Skilled craftsmen bring the approved design to life with precision, quality, and care.</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="step-circle">
+          🏠
+          <span class="step-num">4</span>
+        </div>
+        <h3>Final Handover</h3>
+        <p>We do a complete walkthrough, ensure everything is perfect, and hand over your dream space.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section id="testimonials">
+  <div class="testi-header fade-up">
+    <div class="section-label" style="text-align:center;">Client Voices</div>
+    <h2 class="section-title" style="text-align:center;">What Our Clients Say</h2>
+  </div>
+  <div style="overflow:hidden;">
+    <div class="marquee-track" id="marqueeTrack">
+      <!-- Cards duplicated for seamless loop -->
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Excellent work and neat finishing! We are so happy with the result."</p>
+        <div class="testi-author"><div class="testi-avatar">R</div><div><div class="testi-name">Ramesh Kumar</div><div class="testi-loc">Rajapalayam</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Very professional and on-time delivery. Highly impressed with their work ethic."</p>
+        <div class="testi-author"><div class="testi-avatar">P</div><div><div class="testi-name">Priya Selvam</div><div class="testi-loc">Sivakasi</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Affordable and high-quality interiors. Best decision we made for our new home!"</p>
+        <div class="testi-author"><div class="testi-avatar">M</div><div><div class="testi-name">Muthu Pandian</div><div class="testi-loc">Rajapalayam</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Customized design exactly as we wanted. They really listened to every detail."</p>
+        <div class="testi-author"><div class="testi-avatar">S</div><div><div class="testi-name">Saranya Murugan</div><div class="testi-loc">Sivakasi</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Best interior service in Rajapalayam! Our kitchen looks absolutely stunning."</p>
+        <div class="testi-author"><div class="testi-avatar">V</div><div><div class="testi-name">Vijayakumar S</div><div class="testi-loc">Rajapalayam</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Friendly team and smooth process from start to finish. Zero stress experience!"</p>
+        <div class="testi-author"><div class="testi-avatar">K</div><div><div class="testi-name">Kavitha Nair</div><div class="testi-loc">Sivakasi</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Highly recommended for home interiors. The quality truly exceeded our expectations."</p>
+        <div class="testi-author"><div class="testi-avatar">A</div><div><div class="testi-name">Arun Prakash</div><div class="testi-loc">Rajapalayam</div></div></div>
+      </div>
+      <!-- Duplicate for seamless loop -->
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Excellent work and neat finishing! We are so happy with the result."</p>
+        <div class="testi-author"><div class="testi-avatar">R</div><div><div class="testi-name">Ramesh Kumar</div><div class="testi-loc">Rajapalayam</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Very professional and on-time delivery. Highly impressed with their work ethic."</p>
+        <div class="testi-author"><div class="testi-avatar">P</div><div><div class="testi-name">Priya Selvam</div><div class="testi-loc">Sivakasi</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Affordable and high-quality interiors. Best decision we made for our new home!"</p>
+        <div class="testi-author"><div class="testi-avatar">M</div><div><div class="testi-name">Muthu Pandian</div><div class="testi-loc">Rajapalayam</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Customized design exactly as we wanted. They really listened to every detail."</p>
+        <div class="testi-author"><div class="testi-avatar">S</div><div><div class="testi-name">Saranya Murugan</div><div class="testi-loc">Sivakasi</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Best interior service in Rajapalayam! Our kitchen looks absolutely stunning."</p>
+        <div class="testi-author"><div class="testi-avatar">V</div><div><div class="testi-name">Vijayakumar S</div><div class="testi-loc">Rajapalayam</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Friendly team and smooth process from start to finish. Zero stress experience!"</p>
+        <div class="testi-author"><div class="testi-avatar">K</div><div><div class="testi-name">Kavitha Nair</div><div class="testi-loc">Sivakasi</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA STRIP ── -->
+<section id="cta">
+  <div class="container">
+    <div class="section-label" style="text-align:center;">Ready to Begin?</div>
+    <h2 class="section-title light">Start Your Dream Home Today</h2>
+    <p>Let's transform your vision into a beautiful, livable reality.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/9345796509?text=I%27d%20like%20a%20free%20consultation%20for%20my%20home%20interiors!" target="_blank" class="btn-wa">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Get Free Consultation on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-info fade-up">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Let's Create Your Dream Space</h2>
+        <p>Ready to begin your interior transformation? Reach out to us — we'd love to hear about your vision and bring it to life.</p>
+        <div class="info-block">
+          <span class="info-ico">📍</span>
+          <div>
+            <h4>Our Locations</h4>
+            <p>Rajapalayam, Tamil Nadu<br>Sivakasi, Tamil Nadu</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <span class="info-ico">💬</span>
+          <div>
+            <h4>WhatsApp Only</h4>
+            <p><a href="https://wa.me/9345796509" target="_blank" style="color:var(--gold);text-decoration:none;">+91 9345796509</a><br><small style="color:#aaa;font-size:12px;">We respond fastest on WhatsApp</small></p>
+          </div>
+        </div>
+        <div class="info-block">
+          <span class="info-ico">🕐</span>
+          <div>
+            <h4>Working Hours</h4>
+            <p>Mon – Sat: 9:00 AM – 7:00 PM<br>Sunday: By Appointment</p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form fade-up">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="cName" placeholder="Eg: Ramesh Kumar">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" id="cPhone" placeholder="Eg: 9876543210">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Interested In</label>
+          <select id="cService">
+            <option value="">Select a service...</option>
+            <option>Modular Kitchen</option>
+            <option>Wardrobe</option>
+            <option>Full Home Interior</option>
+            <option>Office Interior</option>
+            <option>Turnkey Solution</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Your Message</label>
+          <textarea id="cMessage" placeholder="Tell us about your project, location, or any specific requirements..."></textarea>
+        </div>
+        <div class="form-submit">
+          <button class="btn btn-gold" onclick="sendWA()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Send via WhatsApp
+          </button>
+          <span style="font-size:12px;color:#aaa;font-weight:300;">We'll respond within 30 minutes</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
 <footer>
-  <strong>நம்ம ஊரு பாய் | Namma Ooru Paai</strong><br>
-  📞 +91 63694 50556 &nbsp;|&nbsp; 🌿 100% Natural &amp; Handmade<br>
-  📦 Courier charges extra &nbsp;|&nbsp; 📐 Custom sizes available<br><br>
-  <span style="opacity:.5">© 2025 Namma Ooru Paai. All rights reserved.</span>
+  <div class="container">
+    <div class="footer-gold-line"></div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/mnt/user-data/uploads/IMG-20260416-WA0003_jpg.jpeg" alt="ARC-DEC Interiors" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span style="display:none;font-family:var(--font-display);font-size:1.8rem;font-weight:500;color:var(--gold);letter-spacing:3px;margin-bottom:16px;display:block;">ARC-DEC</span>
+        <p>Crafting spaces that inspire — complete interior solutions for homes and offices in Rajapalayam and Sivakasi.</p>
+        <div class="social-links" style="margin-top:20px;">
+          <a href="#" title="Instagram">📸</a>
+          <a href="https://wa.me/9345796509" target="_blank" title="WhatsApp">💬</a>
+        </div>
+        <div class="footer-seo" style="margin-top:16px;">
+          <span>Interiors in Rajapalayam</span>
+          <span>Interiors in Sivakasi</span>
+          <span>Modular Kitchen Tamil Nadu</span>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Portfolio</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#services">Modular Kitchens</a></li>
+          <li><a href="#services">Wardrobes</a></li>
+          <li><a href="#services">False Ceiling</a></li>
+          <li><a href="#services">TV Units</a></li>
+          <li><a href="#services">Pooja Units</a></li>
+          <li><a href="#services">Office Interiors</a></li>
+          <li><a href="#services">Turnkey Solutions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Locations</h4>
+        <ul>
+          <li><a href="#contact">Rajapalayam</a></li>
+          <li><a href="#contact">Sivakasi</a></li>
+          <li><a href="#contact">Tamil Nadu</a></li>
+        </ul>
+        <div style="margin-top:28px;">
+          <h4>Connect</h4>
+          <a href="https://wa.me/9345796509?text=Hello%20ARC-DEC%20Interiors!" target="_blank" class="btn-wa" style="margin-top:12px;display:inline-flex;font-size:11px;padding:10px 20px;border-radius:2px;">
+            <svg style="width:16px;height:16px;fill:white;" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ARC-DEC Interiors. All rights reserved. | Rajapalayam & Sivakasi, Tamil Nadu</p>
+      <p style="color:rgba(255,255,255,0.1);">Crafting Spaces That Inspire</p>
+    </div>
+  </div>
 </footer>
 
-<!-- CART BAR -->
-<div class="cart-bar" id="cartBar">
-  <div class="cart-info"><span class="cart-count" id="cartCount">0</span> items in cart</div>
-  <div class="cart-total" id="cartTotal">₹0</div>
-  <button class="btn-whatsapp" onclick="openCartModal()">🛒 View Cart</button>
-</div>
-
-<!-- CART MODAL -->
-<div class="modal-overlay" id="modalOverlay" onclick="closeModalOnBg(event)">
-  <div class="modal">
-    <div class="modal-header">
-      <div class="modal-title">🛒 Your Cart</div>
-      <button class="modal-close" onclick="closeModal()">✕</button>
-    </div>
-    <div id="cartItemsList"></div>
-    <div id="cartFooter"></div>
-  </div>
-</div>
-
-<!-- LOGIN -->
-<div id="loginOverlay" onclick="loginBgClose(event)">
-  <div class="login-box">
-    <h3>🔐 Owner Login</h3>
-    <div class="login-err" id="loginErr">Wrong password. Try again.</div>
-    <input type="password" id="pwInput" placeholder="Enter password" onkeydown="if(event.key==='Enter')doLogin()">
-    <button class="btn-login" onclick="doLogin()">Login</button>
-    <br><button class="login-cancel" onclick="closeLogin()">Cancel</button>
-  </div>
-</div>
-
-<!-- ADMIN PANEL -->
-<div id="adminPanel">
-  <div class="admin-topbar">
-    <h2>🛠️ Manage Products</h2>
-    <div class="admin-topbar-actions">
-      <button class="btn-add-new" onclick="showAddForm()">＋ Add Product</button>
-      <button class="btn-logout" onclick="logoutAdmin()">✕ Close</button>
-    </div>
-  </div>
-  <div class="admin-body">
-    <div class="admin-hint">
-      <strong>👋 Welcome! Here's how to manage your products:</strong>
-      ➕ Click <b>"Add Product"</b> to add a new mat &nbsp;|&nbsp;
-      ✏️ Click <b>"Edit"</b> on any card to change name, size, or price &nbsp;|&nbsp;
-      🗑️ Click <b>"Delete"</b> to remove a product &nbsp;|&nbsp;
-      💾 All changes are <b>saved automatically</b> — customers see them instantly!
-    </div>
-    <div id="adminFormWrap" style="display:none;"></div>
-    <div id="adminProductList"></div>
-  </div>
-</div>
-
-<div class="success-toast" id="toast"></div>
-
 <script>
-const ADMIN_PASSWORD = 'paai2024';
-const WA_NUMBER = '916369450556';
-const STORAGE_KEY = 'nop_products_v2';
+// ── NAV SCROLL ──
+const nav = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+});
+// Always show scrolled state (dark bg from start since hero is full-height)
+nav.classList.add('scrolled');
 
-const DEFAULT_PRODUCTS = [
-  {id:'p1',name:'Prayer Mat',size:'2 x 2 ft',price:349,use:'Prayer / Pooja',icon:'🙏',category:'prayer',popular:false},
-  {id:'p2',name:'Prayer Mat',size:'3 x 2 ft',price:499,use:'Prayer / Pooja',icon:'🙏',category:'prayer',popular:false},
-  {id:'s1',name:'Standard Mat',size:'6 x 3 ft',price:650,use:'Decoration / Bulk',icon:'🪴',category:'standard',popular:false},
-  {id:'e1',name:'Extra Strong Mat',size:'6 x 3 ft',price:850,use:'Sleeping',icon:'😴',category:'strong',popular:false},
-  {id:'e2',name:'Extra Strong Mat',size:'6 x 4 ft',price:1299,use:'Sleeping',icon:'⭐',category:'strong',popular:true},
-  {id:'e3',name:'Extra Strong Mat Large',size:'6 x 5 ft',price:1599,use:'Sleeping',icon:'😴',category:'strong',popular:false},
-  {id:'f1',name:'Family Mat',size:'6 x 6 ft Double',price:1899,use:'Family',icon:'🏡',category:'family',popular:false},
-  {id:'f2',name:'Family Mat King Size',size:'6 x 7 ft',price:2199,use:'Family',icon:'👑',category:'family',popular:false},
-];
+// ── MOBILE MENU ──
+function openMobile() { document.getElementById('mobileMenu').classList.add('open'); document.body.style.overflow='hidden'; }
+function closeMobile() { document.getElementById('mobileMenu').classList.remove('open'); document.body.style.overflow=''; }
 
-const CATEGORIES = [
-  {key:'prayer',  label:'Prayet Mats', emoji:'🛕 Prayer Mats — விரிப்பு'},
-  {key:'standard',label:'Standard Mats', emoji:'🏠 Standard Mats — அலங்காரம்'},
-  {key:'strong',  label:'Extra Strong Mats', emoji:'💪 Extra Strong Mats — தூக்கும் பாய்'},
-  {key:'family',  label:'Family Mats', emoji:'👨‍👩‍👧‍👦 Family Mats — குடும்ப பாய்'},
-  {key:'other',   label:'Other Products', emoji:'🌿 Other Products'},
-];
+// ── SCROLL ANIMATIONS ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-function loadProducts(){
-  try{const s=localStorage.getItem(STORAGE_KEY);return s?JSON.parse(s):DEFAULT_PRODUCTS;}
-  catch(e){return DEFAULT_PRODUCTS;}
-}
-function saveProducts(p){localStorage.setItem(STORAGE_KEY,JSON.stringify(p));}
-
-let products=loadProducts();
-
-// ─── SHOP ───
-function renderShop(){
-  const wrap=document.getElementById('shopContent');
-  let html='';
-  CATEGORIES.forEach(cat=>{
-    const items=products.filter(p=>p.category===cat.key);
-    if(!items.length)return;
-    html+=`<div class="category-title">${cat.emoji}</div><div class="product-grid">`;
-    items.forEach(p=>{
-      html+=`<div class="product-card cat-${p.category}${p.popular?' popular':''}" data-id="${p.id}">
-        <div class="card-visual">${p.icon}</div>
-        <div class="card-body">
-          <div class="card-name">${p.name}</div>
-          <div class="card-size">${p.size}</div>
-          <div class="card-use">${p.use}</div>
-          <div class="card-price">&#8377;${Number(p.price).toLocaleString('en-IN')} <small>+ courier</small></div>
-          <button class="btn-cart" onclick="addToCart(this)">Add to Cart 🛒</button>
-        </div>
-      </div>`;
+// ── PORTFOLIO TABS ──
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.portfolio-item').forEach(item => {
+      if (filter === 'all' || item.dataset.cat === filter) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
     });
-    html+='</div>';
   });
-  if(!html)html='<p style="color:#aaa;font-style:italic;padding:1rem 0;">No products yet. Add from Admin Panel!</p>';
-  wrap.innerHTML=html;
+});
+
+// ── WHATSAPP FORM ──
+function sendWA() {
+  const name = document.getElementById('cName').value.trim();
+  const phone = document.getElementById('cPhone').value.trim();
+  const service = document.getElementById('cService').value;
+  const message = document.getElementById('cMessage').value.trim();
+  if (!name || !phone) { alert('Please enter your name and phone number.'); return; }
+  const text = `Hello ARC-DEC Interiors! 👋%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Service:* ${encodeURIComponent(service || 'Not specified')}%0A*Message:* ${encodeURIComponent(message || 'I am interested in your services.')}`;
+  window.open(`https://wa.me/9345796509?text=${text}`, '_blank');
 }
 
-// ─── CART ───
-const cart={};
-
-function addToCart(btn){
-  const id=btn.closest('.product-card').dataset.id;
-  cart[id]=(cart[id]||0)+1;
-  updateCartUI();
-  btn.textContent='✓ Added!';
-  btn.style.background='var(--gold)';
-  setTimeout(()=>{btn.textContent='Add to Cart 🛒';btn.style.background='';},1200);
-}
-
-function updateCartUI(){
-  const count=Object.values(cart).reduce((a,b)=>a+b,0);
-  const total=Object.entries(cart).reduce((s,[id,qty])=>{
-    const p=products.find(x=>x.id===id);return s+(p?p.price*qty:0);},0);
-  document.getElementById('cartCount').textContent=count;
-  document.getElementById('cartTotal').textContent='₹'+total.toLocaleString('en-IN');
-  document.getElementById('cartBar').classList.toggle('visible',count>0);
-}
-
-function openCartModal(){renderModal();document.getElementById('modalOverlay').classList.add('open');}
-function closeModal(){document.getElementById('modalOverlay').classList.remove('open');}
-function closeModalOnBg(e){if(e.target===document.getElementById('modalOverlay'))closeModal();}
-
-function renderModal(){
-  const list=document.getElementById('cartItemsList');
-  const footer=document.getElementById('cartFooter');
-  const ids=Object.keys(cart).filter(id=>cart[id]>0);
-  if(!ids.length){
-    list.innerHTML='<div class="empty-cart">Your cart is empty 🌿<br>Add some mats to get started!</div>';
-    footer.innerHTML='';return;
-  }
-  list.innerHTML=ids.map(id=>{
-    const p=products.find(x=>x.id===id);if(!p)return'';
-    const qty=cart[id];
-    return `<div class="cart-item">
-      <div class="ci-icon">${p.icon}</div>
-      <div class="ci-info"><div class="ci-name">${p.name}</div><div class="ci-size">${p.size}</div></div>
-      <div class="ci-controls">
-        <button class="qty-btn" onclick="changeQty('${id}',-1)">−</button>
-        <span class="qty-num">${qty}</span>
-        <button class="qty-btn" onclick="changeQty('${id}',1)">+</button>
-      </div>
-      <div class="ci-price">₹${(p.price*qty).toLocaleString('en-IN')}</div>
-      <button class="remove-btn" onclick="removeItem('${id}')">✕</button>
-    </div>`;
-  }).join('');
-  const subtotal=ids.reduce((s,id)=>{const p=products.find(x=>x.id===id);return s+(p?p.price*cart[id]:0);},0);
-  const totalQty=ids.reduce((s,id)=>s+cart[id],0);
-  footer.innerHTML=`<div class="modal-footer">
-    <div class="total-row"><span>Subtotal (${totalQty} item${totalQty>1?'s':''})</span><span>₹${subtotal.toLocaleString('en-IN')}</span></div>
-    <div class="total-row"><span>Courier charges</span><span>As applicable</span></div>
-    <div class="total-row grand"><span>Total</span><span>₹${subtotal.toLocaleString('en-IN')}+</span></div>
-    <p class="note-text">* Exact courier cost confirmed on WhatsApp</p>
-    <button class="btn-order" id="waOrderBtn">
-      <svg width="18" height="18" viewBox="0 0 32 32" fill="white"><path d="M16 0C7.164 0 0 7.163 0 16c0 2.82.736 5.467 2.018 7.766L0 32l8.44-2.013A15.93 15.93 0 0016 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm8.14 22.258c-.34.957-1.998 1.83-2.758 1.946-.707.108-1.6.153-2.58-.16-.595-.192-1.359-.447-2.34-.876-4.116-1.778-6.8-5.923-7.003-6.197-.203-.273-1.657-2.204-1.657-4.204 0-2 1.05-2.986 1.423-3.393.373-.408.814-.51 1.085-.51h.78c.25 0 .59-.094.922.705l1.32 3.207c.11.264.183.574-.02.878l-.49.717-.367.473c-.203.255-.414.533-.178.975.236.44 1.048 1.72 2.25 2.787 1.547 1.375 2.85 1.8 3.29 2.003.44.203.695.17.952-.102l1.088-1.226c.274-.318.543-.254.916-.102l2.87 1.35c.407.192.68.285.78.443.1.16.1.92-.24 1.878z"/></svg>
-      Order on WhatsApp
-    </button>
-  </div>`;
-  document.getElementById('waOrderBtn').addEventListener('click',()=>{
-    window.open('https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(buildOrderText(ids)),'_blank');
+// ── SMOOTH ACTIVE NAV ──
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(sec => {
+    if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
   });
-}
-
-function changeQty(id,delta){
-  cart[id]=(cart[id]||0)+delta;
-  if(cart[id]<=0)delete cart[id];
-  updateCartUI();
-  Object.keys(cart).length?renderModal():setTimeout(closeModal,300);
-}
-function removeItem(id){
-  delete cart[id];updateCartUI();
-  if(!Object.keys(cart).length){renderModal();setTimeout(closeModal,300);}else renderModal();
-}
-function buildOrderText(ids){
-  const lines=ids.map(id=>{const p=products.find(x=>x.id===id);return `• ${p.name} (${p.size}) x${cart[id]} = Rs.${(p.price*cart[id]).toLocaleString('en-IN')}`;});
-  const sub=ids.reduce((s,id)=>{const p=products.find(x=>x.id===id);return s+(p?p.price*cart[id]:0);},0);
-  return `Hello! Order from Namma Ooru Paai:\n\n${lines.join('\n')}\n\nSubtotal: Rs.${sub.toLocaleString('en-IN')} + courier\n\nPlease confirm and share courier cost. Thank you!`;
-}
-function openWhatsApp(msg){window.open('https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(msg),'_blank');}
-
-// ─── ADMIN LOGIN ───
-function openLogin(){
-  document.getElementById('loginOverlay').classList.add('open');
-  document.getElementById('pwInput').value='';
-  document.getElementById('loginErr').style.display='none';
-  setTimeout(()=>document.getElementById('pwInput').focus(),100);
-}
-function closeLogin(){document.getElementById('loginOverlay').classList.remove('open');}
-function loginBgClose(e){if(e.target===document.getElementById('loginOverlay'))closeLogin();}
-function doLogin(){
-  if(document.getElementById('pwInput').value===ADMIN_PASSWORD){
-    closeLogin();openAdminPanel();
-  }else{
-    document.getElementById('loginErr').style.display='block';
-    document.getElementById('pwInput').value='';
-    document.getElementById('pwInput').focus();
-  }
-}
-
-// ─── ADMIN PANEL ───
-function openAdminPanel(){document.getElementById('adminPanel').classList.add('open');renderAdminList();}
-function logoutAdmin(){document.getElementById('adminPanel').classList.remove('open');hideForm();}
-
-function renderAdminList(){
-  const wrap=document.getElementById('adminProductList');
-  if(!products.length){wrap.innerHTML='<div class="admin-empty">No products yet. Click "+ Add Product" above!</div>';return;}
-  wrap.innerHTML='<div class="admin-product-list">'+products.map(p=>`
-    <div class="admin-card${p.popular?' popular-badge':''}">
-      <div class="admin-card-icon">${p.icon}</div>
-      <div class="admin-card-info">
-        <div class="admin-card-name">${p.name}${p.popular?' ⭐':''}</div>
-        <div class="admin-card-meta">${p.size} &nbsp;|&nbsp; ${p.use}</div>
-        <div class="admin-card-price">₹${Number(p.price).toLocaleString('en-IN')}</div>
-      </div>
-      <div class="admin-card-actions">
-        <button class="btn-edit" onclick="showEditForm('${p.id}')">✏️ Edit</button>
-        <button class="btn-delete" onclick="deleteProduct('${p.id}')">🗑️ Delete</button>
-      </div>
-    </div>`).join('')+'</div>';
-}
-
-function showAddForm(){
-  renderForm(null);
-  const fw=document.getElementById('adminFormWrap');
-  fw.style.display='block';
-  fw.scrollIntoView({behavior:'smooth'});
-}
-function showEditForm(id){
-  renderForm(products.find(x=>x.id===id));
-  const fw=document.getElementById('adminFormWrap');
-  fw.style.display='block';
-  fw.scrollIntoView({behavior:'smooth'});
-}
-
-function renderForm(p){
-  const isEdit=!!p;
-  document.getElementById('adminFormWrap').innerHTML=`
-  <div class="admin-form-wrap">
-    <h3>${isEdit?'✏️ Edit Product':'➕ Add New Product'}</h3>
-    <div class="form-grid">
-      <div class="form-group">
-        <label>Product Name *</label>
-        <input type="text" id="f_name" placeholder="e.g. Prayer Mat" value="${isEdit?p.name:''}">
-      </div>
-      <div class="form-group">
-        <label>Size *</label>
-        <input type="text" id="f_size" placeholder="e.g. 6 x 4 ft" value="${isEdit?p.size:''}">
-      </div>
-      <div class="form-group">
-        <label>Price in Rupees *</label>
-        <input type="number" id="f_price" placeholder="e.g. 1299" value="${isEdit?p.price:''}">
-      </div>
-      <div class="form-group">
-        <label>Category *</label>
-        <select id="f_cat">
-          <option value="prayer"${isEdit&&p.category==='prayer'?' selected':''}>🛕 Prayer Mats</option>
-          <option value="standard"${isEdit&&p.category==='standard'?' selected':''}>🏠 Standard Mats</option>
-          <option value="strong"${isEdit&&p.category==='strong'?' selected':''}>💪 Extra Strong Mats</option>
-          <option value="family"${isEdit&&p.category==='family'?' selected':''}>👨‍👩‍👧‍👦 Family Mats</option>
-          <option value="other"${isEdit&&p.category==='other'?' selected':''}>🌿 Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Use / Description</label>
-        <input type="text" id="f_use" placeholder="e.g. Sleeping / Prayer" value="${isEdit?p.use:''}">
-      </div>
-      <div class="form-group">
-        <label>Icon (Emoji)</label>
-        <input type="text" id="f_icon" placeholder="e.g. 🙏" value="${isEdit?p.icon:'🌿'}" maxlength="4">
-      </div>
-      <div class="form-group full">
-        <label>&nbsp;</label>
-        <div class="checkbox-row">
-          <input type="checkbox" id="f_popular"${isEdit&&p.popular?' checked':''}>
-          <span>Mark as "Most Popular" — shows an orange badge on this product</span>
-        </div>
-      </div>
-    </div>
-    <div class="form-actions">
-      <button class="btn-save" onclick="saveProduct('${isEdit?p.id:''}')">💾 Save Product</button>
-      <button class="btn-cancel-form" onclick="hideForm()">Cancel</button>
-    </div>
-  </div>`;
-}
-
-function hideForm(){
-  document.getElementById('adminFormWrap').style.display='none';
-  document.getElementById('adminFormWrap').innerHTML='';
-}
-
-function saveProduct(editId){
-  const name=document.getElementById('f_name').value.trim();
-  const size=document.getElementById('f_size').value.trim();
-  const price=parseFloat(document.getElementById('f_price').value);
-  const cat=document.getElementById('f_cat').value;
-  const use=document.getElementById('f_use').value.trim()||cat;
-  const icon=document.getElementById('f_icon').value.trim()||'🌿';
-  const pop=document.getElementById('f_popular').checked;
-  if(!name||!size||!price){alert('Please fill in Name, Size and Price.');return;}
-  if(editId){
-    const idx=products.findIndex(x=>x.id===editId);
-    if(idx>-1)products[idx]={...products[idx],name,size,price,category:cat,use,icon,popular:pop};
-  }else{
-    products.push({id:'prod_'+Date.now(),name,size,price,category:cat,use,icon,popular:pop});
-  }
-  saveProducts(products);
-  renderShop();
-  renderAdminList();
-  hideForm();
-  showToast(editId?'✅ Product updated!':'✅ New product added!');
-}
-
-function deleteProduct(id){
-  const p=products.find(x=>x.id===id);
-  if(!confirm('Delete "'+p.name+' ('+p.size+')"?\nThis cannot be undone.'))return;
-  products=products.filter(x=>x.id!==id);
-  if(cart[id]){delete cart[id];updateCartUI();}
-  saveProducts(products);
-  renderShop();
-  renderAdminList();
-  showToast('🗑️ Product deleted.');
-}
-
-function showToast(msg){
-  const t=document.getElementById('toast');
-  t.textContent=msg;t.style.display='block';
-  setTimeout(()=>t.style.display='none',2500);
-}
-
-// INIT
-renderShop();
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.style.color = link.getAttribute('href') === `#${current}` ? 'var(--gold)' : '';
+  });
+});
 </script>
 </body>
 </html>
